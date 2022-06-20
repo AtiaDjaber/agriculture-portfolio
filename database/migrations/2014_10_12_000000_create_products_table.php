@@ -17,6 +17,7 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('price');
+            $table->bigInteger('views')->default(0);
             $table->text('description')->nullable();
             $table->string('image');
             $table->boolean('is_available')->default(true);

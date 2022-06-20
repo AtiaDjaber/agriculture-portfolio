@@ -12,12 +12,15 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::all();
-        return response()->json($products);
+
+        return view('product', compact('products'));
+        // return response()->json($products);
     }
 
     public function getById(Request $request)
     {
         $product = Product::with(['attachments', 'category'])->find($request->id);
+        $product->update(['views' => $product->views + 1]);
         return response()->json($product);
     }
 }

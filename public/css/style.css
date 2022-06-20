@@ -639,8 +639,8 @@ figure.agileits_effect_moses:hover img {
 	margin:3em 0 0;
 }
 .agileits_w3layouts_news_grid{
-	padding:1.5em;
-	background:#f5f5f5;
+	padding:1em;
+	/* background:#ffffff; */
 }
 .agileits_w3layouts_news_grid ul li{
 	display:inline-block;
