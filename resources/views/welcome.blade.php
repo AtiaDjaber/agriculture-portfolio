@@ -3,7 +3,7 @@
 
 @include('head')
 
-<body>
+<body dir="rtl">
 
     <div class="banner">
         <div class="container">
@@ -36,7 +36,7 @@
                                 <ul class="w3layouts_menu__list">
                                     <li class="active"><a href="index.html">Home</a></li>
                                     <li><a href="about.html">About Us</a></li>
-                                    <li><a href="services.html">Services</a></li>
+                                    <li><a href="products">منتجاتنا</a></li>
                                     <li><a href="gallery.html">Gallery</a></li>
                                     <li><a href="contact.html">Contact Us</a></li>
                                 </ul>

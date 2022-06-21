@@ -3,7 +3,7 @@
 
 @include('head')
 
-<body>
+<body dir="rtl">
     <div class="banner1">
         <div class="container">
             <div class="w3_agileits_banner_main_grid">
@@ -63,7 +63,33 @@
             <div class="clearfix"> </div>
         </div>
     </div>
+    <div id="carouselExampleIndicators" class="carousel slide container" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/banner.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="images/banner.jpg" class="d-block w-100" alt="...">
+            </div>
 
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
     <div class="welcome my-5">
         <div class="container">
             <h3 class="agileits_w3layouts_head">Latest <span>News</span> from plantation</h3>
@@ -79,7 +105,10 @@
                                 <img src="{{ $product->image }}" alt=" " class="img-responsive" />
                                 <div class="w3layouts_news_grid_pos">
                                     <div class="wthree_text">
-                                        <button type="button" class="btn btn-success btn-lg">عرض التفاصيل</button>
+                                        <a href="product/{{ $product->id }}">
+                                            <button type="button" class="btn btn-success btn-lg">عرض
+                                                التفاصيل</button>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

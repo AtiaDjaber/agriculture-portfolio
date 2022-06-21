@@ -21,6 +21,6 @@ class ProductController extends Controller
     {
         $product = Product::with(['attachments', 'category'])->find($request->id);
         $product->update(['views' => $product->views + 1]);
-        return response()->json($product);
+        return view('detail', compact('product'));
     }
 }
