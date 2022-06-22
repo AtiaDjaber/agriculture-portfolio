@@ -17,6 +17,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/admin/login', function () {
+    return view("admin.sign_in");
+});
+Route::get('/admin/dashboard', function () {
+    return view("admin.dashboard");
+});
+Route::prefix('admin')->group(function () {
 
+    Route::prefix('product')->group(function () {
+        Route::get('/create', ['App\Http\Controllers\ProductAdminController', "create"]);
+        Route::get('/edit', [ProductAdminController::class, 'edit']);
+        Route::get('/delete', [ProductAdminController::class, 'destroy']);
+    });
+});
 Route::get('/products', [ProductController::class, "index"]);
 Route::get('/product/{id}', [ProductController::class, "getById"]);

@@ -29,6 +29,8 @@ mix.js('resources/js/app.js', 'public/js')
     ])
     .postCss('resources/css/lsb.css', 'public/css', [
     ])
+    .postCss('resources/dashboard/css/soft-ui-dashboard.css', 'public/css', [
+    ])
     .sass('resources/sass/app.scss', 'public/css')
     .copy(
         'node_modules/@fortawesome/fontawesome-free/webfonts',

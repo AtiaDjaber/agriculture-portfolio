@@ -64,20 +64,24 @@
             <div class="clearfix"> </div>
         </div>
     </div>
-    <div class="row container mt-5 mx-xl-5  mx-md-5">
+    <div class="container">
 
-        <div class="col card border-success mx-2">
-            <img src="{{ $product->image }}">
-        </div>
-        <div class="col mx-2">
-            <div class="row">
-                <h3>{{ $product->name }}</h3>
+        <div class="row  mt-5 mx-xl-5  mx-md-5">
+
+            <div class="col-5 card border-success mx-2">
+                <img src="{{ $product->image }}">
             </div>
-            <div class="row">
-                <span>{{ $product->description }}</>
+            <div class="col mx-2">
+                <div class="row">
+                    <h3>{{ $product->name }}</h3>
+                </div>
+                <div class="row">
+                    <span>{{ $product->description }}</>
+                </div>
             </div>
         </div>
     </div>
+
     <div id="carouselExampleIndicators" class="carousel slide container carousel-dark my-5" data-bs-ride="carousel">
 
         {{-- @for ($i = 0; $i < $product->attachments->count(); $i++)
