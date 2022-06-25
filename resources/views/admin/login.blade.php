@@ -39,16 +39,19 @@
                                     <p class="mb-0">Enter your email and password to sign in</p>
                                 </div>
                                 <div class="card-body">
-                                    <form role="form">
+                                    <form method="POST" role="form" action="{{ route('login') }}">
+                                        @csrf
                                         <label>Email</label>
                                         <div class="mb-3">
                                             <input type="email" class="form-control" placeholder="Email"
-                                                aria-label="Email" aria-describedby="email-addon">
+                                                id="email" name="email" aria-label="Email"
+                                                aria-describedby="email-addon">
                                         </div>
                                         <label>Password</label>
                                         <div class="mb-3">
-                                            <input type="email" class="form-control" placeholder="Password"
-                                                aria-label="Password" aria-describedby="password-addon">
+                                            <input type="Password" name="password" id="password" class="form-control"
+                                                placeholder="Password" aria-label="Password"
+                                                aria-describedby="password-addon">
                                         </div>
                                         <div class="form-check form-switch">
                                             <input class="form-check-input" type="checkbox" id="rememberMe"
@@ -56,8 +59,8 @@
                                             <label class="form-check-label" for="rememberMe">Remember me</label>
                                         </div>
                                         <div class="text-center">
-                                            <button type="button" class="btn bg-gradient-info w-100 mt-4 mb-0">Sign
-                                                in</button>
+                                            <button type="submit" class="btn bg-gradient-info w-100 mt-4 mb-0">
+                                                {{ __('Login') }}</button>
                                         </div>
                                     </form>
                                 </div>

@@ -4,16 +4,21 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\User;
 use Illuminate\Http\Request;
 
-class ProductAdminController extends Controller
+class DashboardController extends Controller
 {
     //
     public function index()
     {
-        $products = Product::paginate(10);
+        $products = Product::with('category')->orderBy("views", "desc")->take(10)->get();
+        $productsCount = Product::count();
+        $categoriesCount = Category::count();
+        $viewsCount = Product::sum('views');
+        $usersCount = User::count();
 
-        return view('admin.products.index', compact('products'));
+        return view('admin.dashboard', compact(['products', 'usersCount', 'viewsCount', 'categoriesCount', 'productsCount']));
         // return response()->json($products);
     }
     public function create()
@@ -22,12 +27,6 @@ class ProductAdminController extends Controller
 
         return view('admin.products.create', compact('categories'));
         // return response()->json($products);
-    }
-    public function store(Request $request)
-    {
-        $product = Product::create($request->all());
-
-        return redirect()->route('product.index');
     }
     public function getById(Request $request)
     {
