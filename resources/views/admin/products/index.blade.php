@@ -144,7 +144,7 @@
 
                                                     <td class="align-middle text-center text-sm">
                                                         {{-- href="{{ route('admin.product.edit') }}" --}}
-                                                        <a href="#"> <i
+                                                        <a href="/admin/products/edit/{{ $product->id }}"> <i
                                                                 style="color: rgb(56, 224, 47);background-color: rgb(229, 255, 229);font-size:18px;border-radius: 50%;padding: 5px;"
                                                                 class="fa-regular fa-pen-to-square"></i>
                                                         </a>

@@ -30,9 +30,11 @@ Route::prefix('admin')->group(function () {
         Route::get('/', ['App\Http\Controllers\ProductAdminController', "index"])->name('product.index');
         Route::get('/create', ['App\Http\Controllers\ProductAdminController', "create"]);
         Route::post('/', ['App\Http\Controllers\ProductAdminController', "store"]);
-        Route::get('/edit', [ProductAdminController::class, 'edit']);
-        Route::delete('/delete', [ProductAdminController::class, 'destroy']);
+        Route::put('/{id}', ['App\Http\Controllers\ProductAdminController', "update"])->name('admin.product.update');
+        Route::get('/edit/{id}', ['App\Http\Controllers\ProductAdminController', 'edit']);
+        Route::delete('/delete', ['App\Http\Controllers\ProductAdminController', 'destroy']);
     });
+    Route::post('upload', ['App\Http\Controllers\AttachmentController', "upload"])->name("admin.upload");
 });
 
 Route::get('/products', [ProductController::class, "index"]);

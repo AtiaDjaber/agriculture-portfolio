@@ -31,27 +31,30 @@
 
                             </div>
                             <div class="card-body px-0 pt-0 ">
-                                <form action=" {!! action('App\Http\Controllers\ProductAdminController@store') !!}" method="POST">
+                                <form action="{{ route('admin.product.update', $product->id) }}" method="POST">
+                                    @method('Put')
                                     @csrf
                                     <div class="container">
 
                                         <div class="mb-3">
                                             <label for="exampleFormControlInput1" class="form-label"> الصنف</label>
-                                            <input type="name" name="name" class="form-control"
-                                                placeholder="اسم الصنف ...">
+                                            <input type="name" name="name" value="{{ $product->name }}"
+                                                class="form-control" placeholder="اسم الصنف ...">
                                         </div>
                                         <div class="form-group">
                                             <label for="category_id">اختيار الفئة</label>
                                             <select class="form-control" name="category_id" id="category_id">
                                                 @foreach ($categories as $category)
-                                                    <option value="{{ $category->id }}">{{ $category->name }}
+                                                    <option value="{{ $category->id }}"
+                                                        @if ($category->id == $product->category_id) selected @endif>
+                                                        {{ $category->name }}
                                                     </option>
                                                 @endforeach
                                             </select>
                                         </div>
                                         <div class="mb-3">
                                             <label for="exampleFormControlTextarea1" class="form-label">الوصف</label>
-                                            <textarea class="form-control" name="description" placeholder="وصف المنتج ..." rows="6"></textarea>
+                                            <textarea class="form-control" name="description" placeholder="وصف المنتج ..." rows="6">   {{ $product->description }}</textarea>
                                         </div>
 
                                         <div id="dZUpload" class="dropzone my-3">
