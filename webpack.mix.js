@@ -16,7 +16,6 @@ mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/lsb.min.js', 'public/js')
     .js('resources/js/move-top.js', 'public/js')
     .js('resources/js/mislider.js', 'public/js')
-    .js('resources/js/jquery.countup.js', 'public/js')
     // .js('resources/js/jquery-2.1.4.min', 'public/js')
     .js('resources/js/jquery.flexslider.js', 'public/js')
     .js('resources/js/jquery.textFx.js', 'public/js')
@@ -31,7 +30,6 @@ mix.js('resources/js/app.js', 'public/js')
     ])
     .postCss('resources/dashboard/css/soft-ui-dashboard.css', 'public/css', [
     ])
-   
     .sass('resources/sass/app.scss', 'public/css')
     .copy(
         'node_modules/@fortawesome/fontawesome-free/webfonts',

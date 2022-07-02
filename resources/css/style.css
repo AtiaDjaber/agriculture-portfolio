@@ -501,7 +501,7 @@ button.close {
 /*-- //welcome --*/
 /*-- welcome-bottom --*/
 .welcome-bottom{
-	background:#aeb09f;
+	/* background:#aeb09f; */
 }
 .wthree_welcome_bottom_right{
 	padding:0;
@@ -638,7 +638,7 @@ figure.agileits_effect_moses h4 {
 }
 
 figure.agileits_effect_moses p {
-	float: right;
+	float: left;
 	padding: 20px;
 	line-height:2em;
 	text-align: right;

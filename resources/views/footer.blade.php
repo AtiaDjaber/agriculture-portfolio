@@ -67,12 +67,8 @@
         <!-- stats -->
         {{-- <script src="js/jquery.waypoints.min.js"></script> --}}
         <script src="{{ mix('js/jquery.waypoints.min.js') }}" defer></script>
-        {{-- <script src="js/jquery.countup.js"></script> --}}
-        <script src="{{ mix('js/jquery.countup.js') }}" defer></script>
 
-        <script>
-            $('.counter').countUp();
-        </script>
+
         <!-- //stats -->
         <!-- mislider -->
         {{-- <script src="js/mislider.js" type="text/javascript"></script> --}}
@@ -183,6 +179,16 @@
                 $().UItoTop({
                     easingType: 'easeOutQuart'
                 });
+
+            });
+        </script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script type="text/javascript">
+            AOS.init({
+                offset: 60,
+                once: false,
+                mirror: false,
+                anchorPlacement: 'top-bottom',
 
             });
         </script>

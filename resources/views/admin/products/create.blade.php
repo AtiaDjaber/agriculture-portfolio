@@ -31,7 +31,7 @@
 
                             </div>
                             <div class="card-body px-0 pt-0 ">
-                                <form action=" {!! action('App\Http\Controllers\ProductAdminController@store') !!}" method="POST">
+                                <form enctype="multipart/form-data" action=" {!! action('App\Http\Controllers\ProductAdminController@store') !!}" method="POST">
                                     @csrf
                                     <div class="container">
 
@@ -40,7 +40,30 @@
                                             <input type="name" name="name" class="form-control"
                                                 placeholder="اسم الصنف ...">
                                         </div>
-                                        <div class="form-group">
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="category_id">اختيار الفئة</label>
+                                                    <select class="form-control" name="category_id" id="category_id">
+                                                        @foreach ($categories as $category)
+                                                            <option value="{{ $category->id }}">
+                                                                {{ $category->name }}
+                                                            </option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-2">
+                                                <label></label>
+                                                <div dir="ltr" class="form-check form-switch mt-2">
+                                                    <label for="is_available">متاح</label>
+                                                    <input class="form-check-input" type="checkbox" name="is_available"
+                                                        id="is_available">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {{-- <div class="form-group">
                                             <label for="category_id">اختيار الفئة</label>
                                             <select class="form-control" name="category_id" id="category_id">
                                                 @foreach ($categories as $category)
@@ -48,11 +71,16 @@
                                                     </option>
                                                 @endforeach
                                             </select>
+                                        </div> --}}
+                                        <div class="mb-3">
+                                            <label for="formFile" class="form-label"> صورة المنتج</label>
+                                            <input type="file" id="formFile" name="image" class="form-control">
                                         </div>
                                         <div class="mb-3">
                                             <label for="exampleFormControlTextarea1" class="form-label">الوصف</label>
                                             <textarea class="form-control" name="description" placeholder="وصف المنتج ..." rows="6"></textarea>
                                         </div>
+
 
                                         <div id="dZUpload" class="dropzone my-3">
                                             <div class="dz-default dz-message">سحب وافلات الصور هنا</div>

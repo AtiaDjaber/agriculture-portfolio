@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Traits\UploadTrait;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -9,6 +10,8 @@ use Illuminate\Http\Request;
 class ProductAdminController extends Controller
 {
     //
+    use UploadTrait;
+
     public function index()
     {
         $products = Product::paginate(10);
@@ -38,7 +41,21 @@ class ProductAdminController extends Controller
     }
     public function store(Request $request)
     {
-        $product = Product::create($request->all());
+
+        $filename = null;
+        if ($request->file('image')) {
+            $filename = $this->uploadFile($request->file('image'), 'images');
+        }
+
+        $product = Product::create([
+            'name' => $request->name,
+            'description' => $request->description,
+            'image' => $filename,
+            'category_id' => $request->category_id,
+            'is_available' => $request->input('is_available') ? 1 : 0,
+            // 'price' => $request->price
+        ]);
+
         if ($request->session()->has('attachments')) {
             foreach ($request->session()->pull('attachments') as $attachment) {
                 $product->attachments()->create(['name' => $attachment]);
@@ -50,11 +67,20 @@ class ProductAdminController extends Controller
 
     public function update(Request $request)
     {
+
+        $filename = null;
+        if ($request->file('image')) {
+            $filename = $this->uploadFile($request->file('image'), 'images');
+        }
+
         $product = Product::find($request->id);
+
         $product->update([
             'name' => $request->name,
             'description' => $request->description,
+            'image' => $filename ?? $product->image,
             'category_id' => $request->category_id,
+            'is_available' => $request->input('is_available') ? 1 : 0,
             // 'price' => $request->price
         ]);
 

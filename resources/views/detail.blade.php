@@ -67,9 +67,8 @@
     <div class="container">
 
         <div class="row  mt-5 mx-xl-5  mx-md-5">
-
-            <div class="col-5 card border-success mx-2">
-                <img src="{{ $product->image }}">
+            <div class="col-4 card border-success mx-2">
+                <img src="/storage/images/{{ $product->image }}">
             </div>
             <div class="col mx-2">
                 <div class="row">
@@ -82,34 +81,43 @@
         </div>
     </div>
 
-    <div id="carouselExampleIndicators" class="carousel slide container carousel-dark my-5" data-bs-ride="carousel">
-
-        {{-- @for ($i = 0; $i < $product->attachments->count(); $i++)
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide-to="{{ $i }}" class=" {{ $i == 0 ? 'active' : '' }}" aria-current="true"
-                    aria-label="Slide {{ $i }}""></button>
-
-            </div>
-        @endfor --}}
-        <div class="carousel-inner">
+    <div class="container mt-5">
+        <div class="row">
+            <h4>مزيد من الصور</h4>
+        </div>
+        <div class="row  my-2">
             @for ($i = 0; $i < $product->attachments->count(); $i++)
-                <div class="carousel-item  {{ $i == 0 ? 'active' : '' }}">
-                    <img src="{{ $product->attachments[$i]->name }}" class="d-block w-100" alt="...">
+                <div class="col-4">
+                    <div class="card ">
+                        <img src="/storage/attachments/{{ $product->attachments[$i]->name }}" class="d-block w-100"
+                            alt="...">
+                    </div>
                 </div>
             @endfor
         </div>
+    </div>
+    {{-- <div id="carouselExampleIndicators" class="carousel slide container carousel-dark my-5" data-bs-ride="carousel"> --}}
 
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+
+    {{-- <div class="carousel-inner">
+            @for ($i = 0; $i < $product->attachments->count(); $i++)
+                <div class="carousel-item  {{ $i == 0 ? 'active' : '' }}">
+                    <img src="/storage/attachments/{{ $product->attachments[$i]->name }}" class="d-block w-100"
+                        alt="...">
+                </div>
+            @endfor
+        </div> --}}
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
     </div>
 
     @include('footer')

@@ -70,7 +70,7 @@
 
     <!-- banner-bottom -->
     <div class="banner-bottom">
-        <div class="col-md-4 agileits_banner_bottom_left">
+        <div class="col-md-4 agileits_banner_bottom_left ">
             <div class="agileinfo_banner_bottom_pos">
                 <div class="w3_agileits_banner_bottom_pos_grid">
                     <div class="col-xs-4 wthree_banner_bottom_grid_left">
@@ -86,7 +86,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 agileits_banner_bottom_left1">
+        <div class="col-md-4 agileits_banner_bottom_left1" ">
             <div class="agileinfo_banner_bottom_pos">
                 <div class="w3_agileits_banner_bottom_pos_grid">
                     <div class="col-xs-4 wthree_banner_bottom_grid_left">
@@ -120,65 +120,56 @@
         </div>
         <div class="clearfix"> </div>
     </div>
-    <!-- //anaityc-work -->
+    <!-- //analytic-work -->
     <div id="welcome_bottom" class="welcome-bottom">
         <div class="col-md-6 wthree_welcome_bottom_left">
             <h3>we work hard and make our country <span>greenery</span></h3>
             <p>Nullam pretium euismod orci ac porta. Interdum et malesuada fames ac ante
                 ipsum primis in faucibus. Donec at scelerisque dolor, vel placerat mi.</p>
-            <div class="col-md-6 wthree_welcome_bottom_left_grid">
+            <div class="col-md-6 wthree_welcome_bottom_left_grid" data-aos="zoom-in">
                 <div class="w3l_social_icon_gridl">
                     <img src="images/8.png" alt=" " class="img-responsive" />
                 </div>
                 <div class="w3l_social_icon_gridr">
-                    <h4 class="counter">23,536</h4>
+                    <h4 class="counter">23</h4>
                 </div>
                 <div class="clearfix"> </div>
-                <div class="w3l_social_icon_grid_pos">
-                    <label>-</label>
-                </div>
+
             </div>
-            <div class="col-md-6 wthree_welcome_bottom_left_grid">
+            <div class="col-md-6 wthree_welcome_bottom_left_grid" data-aos="zoom-in">
                 <div class="w3l_social_icon_gridl">
                     <img src="images/9.png" alt=" " class="img-responsive" />
                 </div>
                 <div class="w3l_social_icon_gridr">
-                    <h4 class="counter">53,234</h4>
+                    <h4 class="counter">5234</h4>
                 </div>
                 <div class="clearfix"> </div>
-                <div class="w3l_social_icon_grid_pos">
-                    <label>-</label>
-                </div>
             </div>
-            <div class="col-md-6 wthree_welcome_bottom_left_grid">
+            <div class="col-md-6 wthree_welcome_bottom_left_grid" data-aos="zoom-in">
                 <div class="w3l_social_icon_gridl">
                     <img src="images/10.png" alt=" " class="img-responsive" />
                 </div>
                 <div class="w3l_social_icon_gridr">
-                    <h4 class="counter">43,568</h4>
+                    <h4 class="counter">468</h4>
                 </div>
                 <div class="clearfix"> </div>
-                <div class="w3l_social_icon_grid_pos">
-                    <label>-</label>
-                </div>
+
             </div>
-            <div class="col-md-6 wthree_welcome_bottom_left_grid">
+            <div class="col-md-6 wthree_welcome_bottom_left_grid " data-aos="zoom-in">
                 <div class="w3l_social_icon_gridl">
                     <img src="images/11.png" alt=" " class="img-responsive" />
                 </div>
                 <div class="w3l_social_icon_gridr">
-                    <h4 class="counter">12,432</h4>
+                    <h4 class="counter">122</h4>
                 </div>
                 <div class="clearfix"> </div>
-                <div class="w3l_social_icon_grid_pos">
-                    <label>-</label>
-                </div>
+
             </div>
             <div class="clearfix"> </div>
         </div>
-        <div class="col-md-6 wthree_welcome_bottom_right">
-            <div class="agileinfo_grid">
-                <figure class="agileits_effect_moses">
+        <div class="col-md-6 wthree_welcome_bottom_right " data-aos="zoom-in">
+            <div class="agileinfo_grid " style="height: 100%">
+                <figure class="agileits_effect_moses ">
                     <img src="images/4.jpg" alt=" " class="img-responsive" />
                     <figcaption>
                         <h4>Plantation <span>For Future Growth</span></h4>
@@ -192,6 +183,39 @@
     </div>
 
     @include('footer')
+    {{-- <script src="{{ mix('js/jquery_countup.js') }}" defer></script> --}}
+
+    <script type="text/javascript">
+        function isCounterElementVisible($element) {
+            var topView = $(window).scrollTop();
+            var botView = topView + $(window).height();
+            var topElement = $element.offset().top;
+            var botElement = topElement + $element.height();
+            return ((botElement <= botView) && (topElement >= topView));
+        }
+        var visibled = false;
+        $(window).scroll(function() {
+            $(".counter").each(function() {
+                isOnView = isCounterElementVisible($(this));
+                if (isOnView && !$(this).hasClass('visibled') && !visibled) {
+                    $(this).addClass('visibled');
+
+                    visibled = true;
+                    $('.counter').each(function() {
+                        $(this).prop('Counter', 0).animate({
+                            Counter: $(this).text()
+                        }, {
+                            duration: 4000,
+                            easing: 'swing',
+                            step: function(now) {
+                                $(this).text(Math.ceil(now));
+                            }
+                        });
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -102,7 +102,8 @@
                     <div class="col mb-4 d-flex align-items-stretch w3ls_news_grid">
                         <div class="card border-success " id="body-card-color">
                             <div class="w3layouts_news_grid">
-                                <img src="{{ $product->image }}" alt=" " class="img-responsive" />
+                                <img src="/storage/images/{{ $product->image }}" alt=" "
+                                    class="img-responsive" />
                                 <div class="w3layouts_news_grid_pos">
                                     <div class="wthree_text">
                                         <a href="product/{{ $product->id }}">
