@@ -42,15 +42,17 @@
         Dropzone.autoDiscover = false;
         $(document).ready(function() {
             $("#dZUpload").dropzone({
-                url: '{{ route('admin.upload') }}',
-                addRemoveLinks: true,
-                // uploadMultiple: true,
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 },
-
-
+                url: '{{ route('admin.upload') }}',
+                addRemoveLinks: true,
                 acceptedFiles: 'image/*',
+                withCredentials: true,
+                // resizeWidth: 800,
+                // resizeHeight: 800,
+
+                resizeQuality: 0.8,
                 success: function(file, response) {
                     var imgName = response;
                     file.previewElement.classList.add("dz-success");

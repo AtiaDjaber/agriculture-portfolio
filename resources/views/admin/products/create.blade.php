@@ -93,7 +93,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
 
             @include('admin.footer')
@@ -101,50 +100,3 @@
         </div>
     </main>
 @endsection
-
-{{-- <body>
-  
-    <style>
-        .dropdown-toggle::after {
-            display: none;
-        }
-
-        .dropzone {
-            background: white;
-            border-radius: 5px;
-            border: 2px dashed rgb(0, 135, 247);
-            border-image: none;
-            max-width: 90%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .dz-message {
-            font-size: 24px;
-        }
-    </style>
-    <script type="text/javascript">
-        Dropzone.autoDiscover = false;
-        $("#dZUpload").dropzone({
-            url: "{{ route('admin.upload') }}",
-            addRemoveLinks: true,
-            uploadMultiple: true,
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            },
-            acceptedFiles: 'image/*',
-            success: function(file, response) {
-                var imgName = response;
-                file.previewElement.classList.add("dz-success");
-                console.log("Successfully uploaded :" + imgName);
-            },
-            error: function(file, response) {
-
-                file.previewElement.classList.add("dz-error");
-            }
-        });
-    </script>
-
-</body>
-
-</html> --}}

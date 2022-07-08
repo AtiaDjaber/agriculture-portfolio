@@ -1,49 +1,14 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
-@include('head')
-
-<body dir="rtl">
+@extends('layouts.welcome')
+@section('content')
     <div class="banner1">
         <div class="container">
             <div class="w3_agileits_banner_main_grid">
                 <div class="w3_agile_logo">
                     <h1><a href="index.html"><span>G</span>erminate<i>Grow healthy products</i></a></h1>
                 </div>
-                <div class="agile_social_icons_banner">
-                    <ul class="agileits_social_list">
-                        <li><a href="#" class="w3_agile_facebook"><i class="fa-brands fa-facebook-f"
-                                    aria-hidden="true"></i></a></li>
-                        <li><a href="#" class="agile_twitter"><i class="fa-brands fa-twitter"
-                                    aria-hidden="true"></i></a>
-                        </li>
-                        <li><a href="#" class="w3_agile_dribble"> <i aria-hidden="true"
-                                    class="fa-brands fa-instagram"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="agileits_w3layouts_menu">
-                    <div class="shy-menu">
-                        <a class="shy-menu-hamburger">
-                            <span class="layer top"></span>
-                            <span class="layer mid"></span>
-                            <span class="layer btm"></span>
-                        </a>
-                        <div class="shy-menu-panel">
-                            <nav class="menu menu--horatio link-effect-8" id="link-effect-8">
-                                <ul class="w3layouts_menu__list">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li class="active"><a href="services.html">Services</a></li>
-                                    <li><a href="gallery.html">Gallery</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                </div>
+                @include('components.social')
+
+                @include('components.menu')
                 <div class="clearfix"> </div>
             </div>
         </div>
@@ -52,10 +17,15 @@
         <div class="container">
             <div class="w3layouts_breadcrumbs_left">
                 <ul>
-                    <li><i class="fa fa-home" aria-hidden="true"></i><a href="index.html">الرئيسية</a><span>/</span>
+                    <li><i class="fa fa-home" style="color: #a0d034;" aria-hidden="true"></i><a href="/"><span
+                                style="color: rgb(85, 84, 84)">الرئيسية</span></a>
                     </li>
-                    <li><i class="fa-solid fa-cubes" aria-hidden="true"></i>المنتجات</li>
-                    <li><i class="fa-solid fa-cubes" aria-hidden="true"></i>{{ $product->name }}</li>
+                    <span>/</span>
+                    <li><i class="fa-solid fa-cubes" style="color: #a0d034;" aria-hidden="true"></i><a
+                            href="/products"><span style="color: rgb(85, 84, 84)">المنتجات</span></a>
+                    </li>
+                    <span>/</span>
+                    <li><span style="color: rgb(85, 84, 84)">{{ $product->name }}</span></li>
                 </ul>
             </div>
             <div class="w3layouts_breadcrumbs_right">
@@ -65,7 +35,6 @@
         </div>
     </div>
     <div class="container">
-
         <div class="row  mt-5 mx-xl-5  mx-md-5">
             <div class="col-4 card border-success mx-2">
                 <img src="/storage/images/{{ $product->image }}">
@@ -89,13 +58,15 @@
             @for ($i = 0; $i < $product->attachments->count(); $i++)
                 <div class="col-4">
                     <div class="card ">
-                        <img src="/storage/attachments/{{ $product->attachments[$i]->name }}" class="d-block w-100"
-                            alt="...">
+                        <img src="/storage/attachments/{{ $product->attachments[$i]->name }}" style="max-height: 300px"
+                            class="d-block w-100" alt="...">
                     </div>
                 </div>
             @endfor
         </div>
     </div>
+
+
     {{-- <div id="carouselExampleIndicators" class="carousel slide container carousel-dark my-5" data-bs-ride="carousel"> --}}
 
 
@@ -107,8 +78,7 @@
                 </div>
             @endfor
         </div> --}}
-
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+    {{-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
         data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
@@ -117,11 +87,6 @@
         data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
-    </button>
-    </div>
-
-    @include('footer')
-
-</body>
-
-</html>
+    </button> --}}
+    {{-- </div> --}}
+@endsection

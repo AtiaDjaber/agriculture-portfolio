@@ -16,8 +16,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
 Route::get('/admin/login', function () {
     return view("admin.login");
 })->name("login");
@@ -37,7 +40,7 @@ Route::prefix('admin')->group(function () {
     Route::post('upload', ['App\Http\Controllers\AttachmentController', "upload"])->name("admin.upload");
 });
 
-Route::get('/products', [ProductController::class, "index"]);
-Route::get('/product/{id}', [ProductController::class, "getById"]);
+Route::get('/products', [ProductController::class, "index"])->name('products');
+Route::get('/product/{id}', [ProductController::class, "getById"])->name('product.detail');
 
 Auth::routes();
