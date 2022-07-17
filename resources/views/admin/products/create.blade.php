@@ -58,7 +58,7 @@
                                                 <label></label>
                                                 <div dir="ltr" class="form-check form-switch mt-2">
                                                     <label for="is_available">متاح</label>
-                                                    <input class="form-check-input" type="checkbox" name="is_available"
+                                                    <input class="form-check-input" checked type="checkbox" name="is_available"
                                                         id="is_available">
                                                 </div>
                                             </div>

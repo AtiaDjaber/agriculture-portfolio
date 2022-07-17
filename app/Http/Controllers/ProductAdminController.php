@@ -14,7 +14,7 @@ class ProductAdminController extends Controller
 
     public function index()
     {
-        $products = Product::paginate(10);
+        $products = Product::orderBy("id","desc")->paginate(10);
 
         return view('admin.products.index', compact('products'));
         // return response()->json($products);

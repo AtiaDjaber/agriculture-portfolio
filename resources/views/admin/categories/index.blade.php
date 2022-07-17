@@ -21,13 +21,6 @@
     <script src="{{ mix('js/app.js') }}"></script>
     <link href="{{ mix('css/soft-ui-dashboard.css') }}" rel="stylesheet">
 
-    {{-- <link href="css/font-awesome.css" rel="stylesheet"> --}}
-
-    {{-- <script src="{{ mix('dashboard/css/soft-ui-dashboard.css') }}" defer></script> --}}
-    {{-- <link href="{{ asset('dashboard/css/soft-ui-dashboard.css') }}" rel="stylesheet"> --}}
-
-    <!-- CSS Files -->
-    {{-- <link id="pagestyle" href="/dashboard/css/soft-ui-dashboard.css?v=1.0.6" rel="stylesheet" /> --}}
 </head>
 
 
@@ -54,7 +47,7 @@
                         </li>
                         <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Dashboard</li>
                     </ol>
-                    <h6 class="font-weight-bolder mb-0">Products</h6>
+                    <h6 class="font-weight-bolder mb-0">Categories</h6>
                 </nav>
                 <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4  justify-content-end" id="navbar">
 
@@ -77,17 +70,17 @@
             </div>
         </nav>
         <!-- End Navbar -->
-        <div   dir="rtl" class="container-fluid pt-2">
+        <div dir="rtl" class="container-fluid py-2">
 
-            <div class="container-fluid ">
+            <div class="container-fluid py-2">
                 <div class="row">
                     <div class="col-12">
                         <div class="card mb-2">
                             <div class="card-header d-flex justify-content-between">
-                                <h4>قائمة المنتجات</h4>
+                                <h4>قائمة الفئات</h4>
                                 <a class="btn btn-outline-primary btn-sm " style="font-size: 16px"
-                                    href="/admin/products/create">
-                                    اضافة منتج جديد
+                                    href="/admin/categories/create">
+                                    اضافة فئة جديدة
                                 </a>
                             </div>
                             <div class="card-body px-0 pt-0 ">
@@ -95,16 +88,9 @@
                                     <table class="table align-items-center mb-0">
                                         <thead>
                                             <tr>
-                                                <th class="text-uppercase text-primary font-weight-bolder opacity-7">
-                                                    الصنف</th>
-                                                {{-- <th class="text-uppercase text-primary font-weight-bolder opacity-7">
-                                                    الوصف</th> --}}
                                                 <th
                                                     class="text-center text-uppercase text-primary font-weight-bolder opacity-7">
-                                                    الفئة</th>
-                                                <th
-                                                    class="text-uppercase text-center  text-primary font-weight-bolder  opacity-7 ps-2">
-                                                    المشاهدات</th>
+                                                    اسم الفئة</th>
                                                 <th
                                                     class="text-center text-uppercase text-primary font-weight-bolder opacity-7">
                                                     التاريخ</th>
@@ -117,46 +103,30 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($products as $product)
+                                            @foreach ($categories as $category)
                                                 <tr>
                                                     <td>
                                                         <div class="d-flex ">
-                                                            <h6 class="text-sm">
-                                                                {{ Str::limit($product->name, 30) }}
+                                                            <h6 class="text-sm px-2">
+                                                                {{ $category->name }}
                                                             </h6>
                                                         </div>
                                                     </td>
-                                                    {{-- <td>
-                                                        <div class="d-flex">
-                                                            <h6 class="text-sm">
-                                                                {{ Str::limit($product->description, 30) }}
-                                                            </h6>
-                                                        </div>
-                                                    </td> --}}
+                                               
                                                     <td class="align-middle text-center text-sm">
                                                         <span
-                                                            class="badge badge-sm bg-gradient-success">{{ $product->category->name }}</span>
-                                                    </td>
-                                                    <td>
-                                                        <p class="text-xs text-center font-weight-bold">
-                                                            {{ $product->views }}
-                                                        </p>
+                                                            class="text-xs font-weight-bold mb-0">{{ Str::substr($category->created_at, 0, 10) }}</span>
                                                     </td>
 
                                                     <td class="align-middle text-center text-sm">
-                                                        <span
-                                                            class="text-xs font-weight-bold mb-0">{{ Str::substr($product->created_at, 0, 10) }}</span>
-                                                    </td>
-
-                                                    <td class="align-middle text-center text-sm">
-                                                        {{-- href="{{ route('admin.product.edit') }}" --}}
-                                                        <a href="/admin/products/edit/{{ $product->id }}"> <i
+                                                        {{-- href="{{ route('admin.category.edit') }}" --}}
+                                                        <a href="/admin/categories/edit/{{ $category->id }}"> <i
                                                                 style="color: rgb(56, 224, 47);background-color: rgb(229, 255, 229);font-size:18px;border-radius: 50%;padding: 5px;"
                                                                 class="fa-regular fa-pen-to-square"></i>
                                                         </a>
                                                     </td>
                                                     <td class="align-middle text-center text-sm">
-                                                        {{-- href="{{ route('admin.product.edit') }}" --}}
+                                                        {{-- href="{{ route('admin.category.edit') }}" --}}
                                                         <a href="#"> <i
                                                                 style="color: rgb(224, 47, 47);background-color: rgb(255, 229, 229);font-size:18px;border-radius: 50%;padding: 5px;"
                                                                 class="fa-regular fa-trash-can"></i>
@@ -168,7 +138,7 @@
                                         </tbody>
                                     </table>
                                     <div class="d-flex justify-content-center my-2">
-                                        {{ $products->links() }}
+                                        {{ $categories->links() }}
 
                                     </div>
                                 </div>

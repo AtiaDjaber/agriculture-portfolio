@@ -71,9 +71,12 @@
                                             <label for="formFile" class="form-label"> صورة المنتج</label>
                                             <input type="file" id="formFile" name="image" class="form-control">
                                         </div>
+                                        @if ( $product->image)
                                         <div class="col-4 card border-success mx-2">
                                             <img src="/storage/images/{{ $product->image }}">
-                                        </div>
+                                        </div> 
+                                        @endif
+                                       
                                         <div class="mb-3">
                                             <label for="exampleFormControlTextarea1" class="form-label">الوصف</label>
                                             <textarea class="form-control" name="description" placeholder="وصف المنتج ..." rows="6">   {{ $product->description }}</textarea>

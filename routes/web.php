@@ -37,6 +37,14 @@ Route::prefix('admin')->group(function () {
         Route::get('/edit/{id}', ['App\Http\Controllers\ProductAdminController', 'edit']);
         Route::delete('/delete', ['App\Http\Controllers\ProductAdminController', 'destroy']);
     });
+    Route::prefix('categories')->group(function () {
+        Route::get('/', ['App\Http\Controllers\CategoryController', "index"])->name('admin.categories.index');
+        Route::get('/create', ['App\Http\Controllers\CategoryController', "create"]);
+        Route::post('/', ['App\Http\Controllers\CategoryController', "store"]);
+        Route::put('/{id}', ['App\Http\Controllers\CategoryController', "update"])->name('admin.categories.update');
+        Route::get('/edit/{id}', ['App\Http\Controllers\CategoryController', 'edit']);
+        Route::delete('/delete', ['App\Http\Controllers\CategoryController', 'destroy']);
+    });
     Route::post('upload', ['App\Http\Controllers\AttachmentController', "upload"])->name("admin.upload");
 });
 
