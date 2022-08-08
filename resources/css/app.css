@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap");
+
+html,
+body {
+    font-size: 100%;
+    font-family: "Cairo";
+    background: #ffffff;
+    margin: 0;
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #08d51d;
+    border-color: #25fd0d;
+}
+
+.page-item.active .page-link:hover {
+    background-color: #08d51d;
+    border-color: #25fd0d;
+}
