@@ -3,9 +3,7 @@
     <div class="banner1">
         <div class="container">
             <div class="w3_agileits_banner_main_grid">
-                <div class="w3_agile_logo">
-                    <h1><a href="index.html"><span>G</span>erminate<i>Grow healthy products</i></a></h1>
-                </div>
+                @include('components.logo')
                 @include('components.social')
                 @include('components.menu')
                 <div class="clearfix"> </div>
@@ -71,8 +69,7 @@
                             <div class="w3layouts_news_grid">
                                 <a href="product/{{ $product->id }}">
                                     <img style="max-height: 260px;height: 240px;width:100%"
-                                        src="/storage/images/{{ $product->image }}" alt=" "
-                                        class="img-responsive" />
+                                        src="/storage/images/{{ $product->image }}" alt=" " class="img-responsive" />
                                     <div class="w3layouts_news_grid_pos">
                                         <div class="wthree_text">
                                             <button type="button" class="btn btn-success ">عرض

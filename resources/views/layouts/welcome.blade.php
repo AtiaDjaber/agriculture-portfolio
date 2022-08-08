@@ -7,7 +7,6 @@
     @yield('content')
 
     @include('footer')
-    {{-- <script src="{{ mix('js/jquery_countup.js') }}" defer></script> --}}
 
     <script type="text/javascript">
         function isCounterElementVisible($element) {

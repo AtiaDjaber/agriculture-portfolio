@@ -3,11 +3,8 @@
     <div class="banner1">
         <div class="container">
             <div class="w3_agileits_banner_main_grid">
-                <div class="w3_agile_logo">
-                    <h1><a href="index.html"><span>G</span>erminate<i>Grow healthy products</i></a></h1>
-                </div>
+                @include('components.logo')
                 @include('components.social')
-
                 @include('components.menu')
                 <div class="clearfix"> </div>
             </div>
@@ -22,7 +19,7 @@
                                 style="color: rgb(85, 84, 84)">الرئيسية</span></a>
                     </li>
                     <span>/</span>
-                    <li><i class="fa-solid fa-cubes" style="color: #a0d034;" aria-hidden="true"></i><a href="/contact"><span
+                    <li><i class="fa-solid fa-phone" style="color: #a0d034;" aria-hidden="true"></i><a href="/contact"><span
                                 style="color: rgb(85, 84, 84)">اتصل بنا</span></a>
                     </li>
                 </ul>
@@ -45,33 +42,33 @@
                 <div class="col-md-8 w3_agile_mail_left">
                     <div class="agileits_mail_grid_right1 agile_mail_grid_right1">
                         <form action="#" method="post">
-                            <span>
-                                <i>Name</i>
-                                <input type="text" name="Name" placeholder=" " required="">
+                            <span class="d-flex ">
+                                <h5 style="width: 150px" class="mt-2">اسمك الكامل</h5>
+                                <input type="text" name="Name" placeholder=" " required>
                             </span>
-                            <span>
-                                <i>Email</i>
-                                <input type="email" name="Email" placeholder=" " required="">
+                            <span class="d-flex ">
+                                <h5 style="width: 150px" class="mt-2">البريد الالكتروني</h5>
+
+                                <input type="email" name="Email" placeholder=" " required>
                             </span>
-                            <span>
-                                <i>Subject</i>
-                                <input type="text" name="Subject" placeholder=" " required="">
+                            <span class="d-flex ">
+                                <h5 style="width: 150px" class="mt-2">عنوان الرسالة</h5>
+                                <input type="text" name="Subject" placeholder=" " required>
                             </span>
-                            <span>
-                                <i>Message</i>
-                                <textarea name="Message" placeholder=" " required=""></textarea>
+                            <span class="d-flex ">
+                                <h5 style="width: 150px" class="mt-2">المحتوي</h5>
+                                <textarea name="Message" placeholder=" " required></textarea>
                             </span>
                             <div class="w3_submit">
-                                <input type="submit" value="Submit Now">
+                                <input type="submit" value="ارسال">
                             </div>
                         </form>
                     </div>
                 </div>
                 <div class="col-md-4 w3_agile_mail_right">
                     <div class="w3_agileits_mail_right_grid">
-                        <h4>About Plantation</h4>
-                        <p>Donec libero lectus, feugiat vel elit nec, mattis tempor mi ante.</p>
-                        <h5>Follow Us On</h5>
+                        <h4 style="font-weight: bold;color: rgb(94, 101, 91)">Sagr Eurl Multi Service</h4>
+                        <h5 class="mt-4">تابعنا على</h5>
                         <ul class="agileits_social_list">
                             <li><a href="#" class="w3_agile_facebook"><i class="fa-brands fa-facebook-f"
                                         aria-hidden="true"></i></a></li>
@@ -83,7 +80,7 @@
 
                         </ul>
                         <div class="w3_agileits_mail_right_grid_pos">
-                            <img src="/images/12.jpg" alt=" " class="img-responsive" />
+                            <img src="/images/logo_empty.png" alt=" " class="img-responsive" />
                         </div>
                     </div>
                     <div class="w3_agileits_mail_right_grid_main">
@@ -93,7 +90,7 @@
                                 <i style="font-size: 26px;color:grey;padding-top: 12px" class="fa-solid fa-at"></i>
                             </div>
                             <div class="w3layouts_mail_grid_left2">
-                                <h3>Mail Us</h3>
+                                <h3>البريد الالكتروني</h3>
                                 <a href="mailto:info@example.com">info@example.com</a>
                             </div>
                             <div class="clearfix"> </div>
@@ -104,8 +101,8 @@
                                     class="fa-solid fa-envelope"></i>
                             </div>
                             <div class="w3layouts_mail_grid_left2">
-                                <h3>Address</h3>
-                                <p>My Company 8907 Ukraine.</p>
+                                <h3>العنوان</h3>
+                                <p>My Company.</p>
                             </div>
                             <div class="clearfix"> </div>
                         </div>
@@ -115,7 +112,7 @@
                                     class="fa-solid fa-phone"></i>
                             </div>
                             <div class="w3layouts_mail_grid_left2">
-                                <h3>Phone</h3>
+                                <h3>الهاتف</h3>
                                 <p>+(0121) 121 121</p>
                             </div>
                             <div class="clearfix"> </div>

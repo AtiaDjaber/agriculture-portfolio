@@ -3,9 +3,8 @@
     <div class="banner1">
         <div class="container">
             <div class="w3_agileits_banner_main_grid">
-                <div class="w3_agile_logo">
-                    <h1><a href="index.html"><span>G</span>erminate<i>Grow healthy products</i></a></h1>
-                </div>
+                @include('components.logo')
+
                 @include('components.social')
 
                 @include('components.menu')

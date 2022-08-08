@@ -3,14 +3,23 @@
         <div class="container">
             <div class="w3agile_footer_grids">
                 <div class="col-md-3 agileinfo_footer_grid">
-                    <div class="agileits_w3layouts_footer_logo">
-                        <h2><a href="index.html"><span>G</span>erminate<i>Grow healthy products</i></a></h2>
+                    {{-- <div class="row"> --}}
+                    <div class="w3_agile_logo">
+                        <a href="/"><img width="80px" height="80px" src="/images/logo_empty.png"></img></a>
+                        {{-- </div> --}}
                     </div>
+
+                    <div dir="rtl" class="row">
+                        <h4 style="font-size: 1.1rem;font-weight:bold">شركة صقر متعددة الخدمات</h4>
+                    </div>
+
                 </div>
+
                 <div class="col-md-4 agileinfo_footer_grid">
                     <h3>معلومات الاتصال</h3>
-                    <h4>اتصل بنا <span>0778867192</span></h4>
-                    <p>My Company, 875 Jewel Road <span>8907 El oued.</span></p>
+                    <h4>اتصل بنا <h4>0660838280</h4>
+                    </h4>
+                    <p>Zone d'activite al atef ghardaia</p>
                     <ul class="agileits_social_list">
                         <li><a href="#" class="w3_agile_facebook"><i class="fa-brands fa-facebook-f"
                                     aria-hidden="true"></i></a></li>
