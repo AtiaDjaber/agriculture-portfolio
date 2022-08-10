@@ -15,20 +15,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
+
 Route::get('/admin/login', function () {
     return view("admin.login");
 })->name("login");
 
-Route::get('/admin/dashboard', ['App\Http\Controllers\DashboardController', "index"])->name('home')->middleware('auth');;
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::prefix('admin')->group(function () {
+Route::prefix('admin')->middleware("auth")->group(function () {
+    Route::get('dashboard', ['App\Http\Controllers\DashboardController', "index"])->name('home');
+
     Route::prefix('products')->group(function () {
         Route::get('/', ['App\Http\Controllers\ProductAdminController', "index"])->name('product.index');
         Route::get('/create', ['App\Http\Controllers\ProductAdminController', "create"]);
@@ -50,5 +46,10 @@ Route::prefix('admin')->group(function () {
 
 Route::get('/products', [ProductController::class, "index"])->name('products');
 Route::get('/product/{id}', [ProductController::class, "getById"])->name('product.detail');
-
+Route::get('/', function () {
+    return view('home');
+});
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
 Auth::routes();

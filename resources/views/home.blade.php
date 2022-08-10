@@ -60,7 +60,7 @@
                     </div>
                     <div class="col-xs-8 wthree_banner_bottom_grid_right">
                         <h4>منتجات فلاحية</h4>
-                        <p>نقدم لك الأدوية الفلاحية المناسبة ذات الجودة العالية</p>
+                        <p>نقدم الأدوية الفلاحية المناسبة لك ذات الجودة العالية</p>
                     </div>
                     <div class="clearfix"> </div>
                 </div>
@@ -83,6 +83,65 @@
             </div>
         </div>
         <div class="clearfix"> </div>
+    </div>
+    <div class="d-flex flex-wrap align-items-center m-5">
+        <img class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 " data-aos="fade-left"
+            src="/images/Farming-260468-pixahive.jpg">
+        <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 " data-aos="fade-right">
+            <h1 class="pt-2" style="font-weight: bold;color:#a4dd25">تهيئة الأراضي الفلاحية</h1>
+            <h4 class="pt-2 subtitle">توفير كافة الظروف للزراعة</h4>
+        </div>
+
+    </div>
+    <div class="d-flex flex-wrap-reverse align-items-center m-5">
+        <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 " data-aos="fade-left">
+            <h1 class="pt-2" style="font-weight: bold;color:#a4dd25">عمليات التسميد</h1>
+            <h4 class="pt-2 subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste aperiam velit sunt
+                aspernatur tempora fuga porro, incidunt repudiandae, quos doloribus sint quo perspiciatis asperiores id
+                officiis doloremque recusandae quasi. Illo!</h4>
+        </div>
+        <img class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 " data-aos="fade-right" src="/images/fertilizer-rates.jpg">
+    </div>
+    <div class="d-flex flex-wrap align-items-center m-5">
+        <img class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 " data-aos="fade-left"
+            src="/images/Crop Protection_Web.jpg">
+        <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 " data-aos="fade-right">
+            <h1 class="pt-2" style="font-weight: bold;color:#a4dd25">عمليات الرش بالادوية</h1>
+            <h4 class="pt-2 subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio deserunt laboriosam
+                cupiditate asperiores aliquam exercitationem dolorem! Impedit natus sed amet, ea aspernatur debitis odit
+                distinctio tempore unde exercitationem quod perferendis.</h4>
+        </div>
+
+    </div>
+    <div class="d-flex flex-wrap-reverse align-items-center m-5">
+        <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 " data-aos="fade-left">
+            <h1 class="pt-2" style="font-weight: bold;color:#a4dd25">عمليات الحصاد</h1>
+            <h4 class="pt-2 subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste aperiam velit sunt
+                aspernatur tempora fuga porro, incidunt repudiandae, quos doloribus sint quo perspiciatis asperiores id
+                officiis doloremque recusandae quasi. Illo!</h4>
+        </div>
+        <img class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 " data-aos="fade-right"
+            src="/images/use-case-agriculture-1.jpg">
+    </div>
+    <div class="d-flex flex-wrap align-items-center m-5">
+        <img class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 " data-aos="fade-left"
+            src="/images/Premium Agribusiness Consulting Service.jpg">
+        <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 " data-aos="fade-right">
+            <h1 class="pt-2" style="font-weight: bold;color:#a4dd25">استشارات فلاحية</h1>
+            <h4 class="pt-2 subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio deserunt laboriosam
+                cupiditate asperiores aliquam exercitationem dolorem! Impedit natus sed amet, ea aspernatur debitis odit
+                distinctio tempore unde exercitationem quod perferendis.</h4>
+        </div>
+    </div>
+    <div class="d-flex flex-wrap-reverse align-items-center m-5">
+        <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 " data-aos="fade-left">
+            <h1 class="pt-2" style="font-weight: bold;color:#a4dd25">تطوير و تحسين الأراضي الفلاحية</h1>
+            <h4 class="pt-2 subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste aperiam velit sunt
+                aspernatur tempora fuga porro, incidunt repudiandae, quos doloribus sint quo perspiciatis asperiores id
+                officiis doloremque recusandae quasi. Illo!</h4>
+        </div>
+        <img class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 " data-aos="fade-right"
+            src="/images/800px-Green_Beds_farmlands_India.jpg">
     </div>
     <!-- //analytic-work -->
     <div id="welcome_bottom" class="welcome-bottom">

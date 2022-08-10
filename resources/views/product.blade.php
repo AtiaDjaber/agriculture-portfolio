@@ -60,6 +60,18 @@
     </div> --}}
     <div class="welcome my-3">
         <div class="container">
+            <div class="d-flex flex-nowrap">
+                <div style="cursor:pointer;" onclick="getDataByFilter(null)" name="category" id="category"
+                    class={{ $category_id == null ? 'chip_active' : 'chip_inactive' }}>
+                    عرض الكل
+                </div>
+                @foreach (App\Models\Category::all() as $category)
+                    <div style="cursor:pointer;" onclick="getDataByFilter({{ $category->id }})" name="category"
+                        id="category" class={{ $category_id == $category->id ? 'chip_active' : 'chip_inactive' }}>
+                        {{ $category->name }}
+                    </div>
+                @endforeach
+            </div>
 
             {{-- <div class="w3ls_news_grids my-5"> --}}
             <div class="row my-3 w3ls_news_grids">
@@ -68,7 +80,7 @@
                         <div class="card border-success " id="body-card-color">
                             <div class="w3layouts_news_grid">
                                 <a href="product/{{ $product->id }}">
-                                    <img style="max-height: 260px;height: 240px;width:100%"
+                                    <img style="max-height: 260px;height: 240px;width:100%;background-color:rgb(244, 253, 242)"
                                         src="/storage/images/{{ $product->image }}" alt=" " class="img-responsive" />
                                     <div class="w3layouts_news_grid_pos">
                                         <div class="wthree_text">
@@ -114,9 +126,39 @@
                     </div> --}}
                 @endforeach
             </div>
-            {{ $products->links('pagination::bootstrap-4') }}
+            {{ $products->withQueryString()->links('pagination::bootstrap-4') }}
         </div>
     </div>
+    <script type="text/javascript">
+        function getDataByFilter(category) {
+
+            if (category == null) {
+                window.history.pushState('products', 'المنتجات',
+                    '/products');
+            } else {
+                window.history.pushState('products', 'المنتجات',
+                    '/products?category=' + category);
+            }
+
+            window.location.reload();
+            // $.ajax({
+            //     type: 'GET',
+            //     dataType: "application/json; charset=utf-8",
+            //     url: '/products?category=' + $("#category").val(),
+            //     headers: {
+            //         'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+            //     },
+            //     success: function(data, status, xhr) {
+            //         console.log('data: ', data);
+            //         debugger
+            //     },
+            //     error: function(xhr, status, error) {
+            //         debugger
+            //         alert("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText)
+            //     }
+            // });
+        }
+    </script>
     <style>
         .border-success {
             border-color: #23825687 !important;

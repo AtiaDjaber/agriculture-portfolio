@@ -44,10 +44,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!-- font-awesome-icons -->
     <link href="css/font-awesome.css" rel="stylesheet">
     <!-- //font-awesome-icons -->
-    <link href="http://fonts.googleapis.com/css?family=Bree+Serif&amp;subset=latin-ext" rel="stylesheet">
+    {{-- <link href="http://fonts.googleapis.com/css?family=Bree+Serif&amp;subset=latin-ext" rel="stylesheet">
     <link
         href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic'
-        rel='stylesheet' type='text/css'>
+        rel='stylesheet' type='text/css'> --}}
     {{-- <link href="{{ mix('css/styles.css') }}" rel="stylesheet"> --}}
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">

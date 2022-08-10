@@ -11,6 +11,7 @@
     "/css/app.css": "/css/app.css",
     "/css/lsb.css": "/css/lsb.css",
     "/css/flexslider.css": "/css/flexslider.css",
+    "/css/style.css": "/css/style.css",
     "/css/soft-ui-dashboard.css": "/css/soft-ui-dashboard.css",
     "/fonts/Tajawal-Black.ttf": "/fonts/Tajawal-Black.ttf",
     "/fonts/Tajawal-Bold.ttf": "/fonts/Tajawal-Bold.ttf",
@@ -38,6 +39,5 @@
     "/webfonts/fa-solid-900.ttf": "/webfonts/fa-solid-900.ttf",
     "/webfonts/fa-solid-900.woff2": "/webfonts/fa-solid-900.woff2",
     "/webfonts/fa-v4compatibility.ttf": "/webfonts/fa-v4compatibility.ttf",
-    "/webfonts/fa-v4compatibility.woff2": "/webfonts/fa-v4compatibility.woff2",
-    "/css/style.css": "/css/style.css"
+    "/webfonts/fa-v4compatibility.woff2": "/webfonts/fa-v4compatibility.woff2"
 }

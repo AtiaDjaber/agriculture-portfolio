@@ -91,7 +91,7 @@
                             </div>
                             <div class="w3layouts_mail_grid_left2">
                                 <h3>البريد الالكتروني</h3>
-                                <a href="mailto:info@example.com">info@example.com</a>
+                                <a href="mailto:info@example.com">eurlsagr.ms@gmail.com</a>
                             </div>
                             <div class="clearfix"> </div>
                         </div>
@@ -102,7 +102,7 @@
                             </div>
                             <div class="w3layouts_mail_grid_left2">
                                 <h3>العنوان</h3>
-                                <p>My Company.</p>
+                                <p>Zone d'activite al atef ghardaia</p>
                             </div>
                             <div class="clearfix"> </div>
                         </div>
@@ -113,7 +113,7 @@
                             </div>
                             <div class="w3layouts_mail_grid_left2">
                                 <h3>الهاتف</h3>
-                                <p>+(0121) 121 121</p>
+                                <p dir="ltr" style="float: right;">+(213) 06 60 83 82 80</p>
                             </div>
                             <div class="clearfix"> </div>
                         </div>
