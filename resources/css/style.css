@@ -7,26 +7,36 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 .chip_inactive {
     display: inline-block;
-    padding: 0 25px;
-    height: 50px;
-    font-size: 16px;
-    line-height: 50px;
+    padding: 0 10px;
+    height: 30px;
+    font-size: 1rem;
+    /* line-height: 50px; */
     margin-left: 8px;
+    margin-bottom: 8px;
     border-radius: 25px;
     color: #313131;
     background-color: #f1f1f1;
 }
 .chip_active {
     display: inline-block;
-    padding: 0 25px;
-    height: 50px;
-    font-size: 16px;
-    line-height: 50px;
+    padding: 0 10px;
+    height: 30px;
+    font-size: 1rem;
+    /* line-height: 50px; */
     margin-left: 8px;
+    margin-bottom: 8px;
     border-radius: 25px;
     color: #f4f4f4;
     background-color: #61f307;
 }
+
+ol,
+ul,
+dl {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
 p,
 ul li,
 ol li {
@@ -753,11 +763,15 @@ figure.agileits_effect_moses:hover img {
 /*-- //welcome-bottom --*/
 /*-- news --*/
 .w3ls_news_grids {
-    margin: 3em 0 0;
+    margin: 0em 0 0;
 }
 .agileits_w3layouts_news_grid {
-    padding: 1.5em;
+    /* padding: 1em; */
     background: #f5f5f5;
+}
+.ol,
+ul {
+    padding-left: 0rem;
 }
 .agileits_w3layouts_news_grid ul li {
     display: inline-block;
@@ -765,7 +779,7 @@ figure.agileits_effect_moses:hover img {
     color: #212121;
 }
 .agileits_w3layouts_news_grid ul li:last-child {
-    margin-left: 2em;
+    margin-left: 1em;
 }
 .agileits_w3layouts_news_grid ul li i {
     padding-right: 1em;
@@ -2350,7 +2364,7 @@ h2.typoh2 {
         width: 25% !important;
     }
     .w3layouts_news_grid {
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
     }
     .w3_agileits_team_grid {
@@ -2584,7 +2598,7 @@ h2.typoh2 {
         left: 50%;
     }
     .agileits_w3layouts_news_grid {
-        padding: 1.5em 1em;
+        padding: 1em 1em;
     }
     .agileinfo_about_text {
         padding-top: 8.5em !important;
@@ -2702,7 +2716,7 @@ h2.typoh2 {
         padding: 3em 3em;
     }
     .agileits_w3layouts_news_grid {
-        padding: 1.5em 0.6em;
+        padding: 1em 0.6em;
     }
     .w3layouts_breadcrumbs_right h2 {
         font-size: 1.5em;
@@ -2854,7 +2868,7 @@ h2.typoh2 {
         margin-left: 2em;
     }
     .w3ls_news_grids {
-        margin: 2em 0 0;
+        margin: 0em 0 0;
     }
     .w3ls_newsletter_grids input[type="submit"] {
         letter-spacing: 1px;

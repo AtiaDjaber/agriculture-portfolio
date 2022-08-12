@@ -60,28 +60,54 @@
     </div> --}}
     <div class="welcome my-3">
         <div class="container">
-            <div class="d-flex flex-nowrap">
+            <div class="d-flex flex-wrap">
                 <div style="cursor:pointer;" onclick="getDataByFilter(null)" name="category" id="category"
                     class={{ $category_id == null ? 'chip_active' : 'chip_inactive' }}>
                     عرض الكل
                 </div>
                 @foreach (App\Models\Category::all() as $category)
-                    <div style="cursor:pointer;" onclick="getDataByFilter({{ $category->id }})" name="category"
-                        id="category" class={{ $category_id == $category->id ? 'chip_active' : 'chip_inactive' }}>
-                        {{ $category->name }}
-                    </div>
+                    <button onclick="getDataByFilter({{ $category->id }})" id="category" name="category"
+                        class={{ $category_id == $category->id ? 'chip_active' : 'chip_inactive' }} type="button"
+                        class="btn btn-success"> {{ $category->name }}</button>
                 @endforeach
+
+
             </div>
 
             {{-- <div class="w3ls_news_grids my-5"> --}}
-            <div class="row my-3 w3ls_news_grids">
+            <div class="row my-3 card-group">
+
                 @foreach ($products as $product)
-                    <div class="col-xl-3 col-md-4 col-sm-6 col-xm-12 mb-4 d-flex align-items-stretch w3ls_news_grid">
+                    <div class="col-xl-3 col-md-4 col-sm-6 col-xm-6 col-6 mb-3">
+                        <div class="card border-success h-100">
+                            <img style="background-color:rgb(252, 255, 251)" src="/storage/images/{{ $product->image }}"
+                                alt="لا يتوفر صورة" class="card-img-top image_grid" />
+                            <div class="card-body">
+                                <h5 class="card-title">{{ Str::limit($product->name, 40) }}</h5>
+                                <p class="card-text"> {{ Str::limit($product->description, 40) }}</p>
+                            </div>
+                            <div class="card-footer agileits_w3layouts_news_grid"
+                                style="background-color: rgb(253, 255, 250)">
+                                <ul class="pt-1" style="padding-left: 0rem; margin-bottom: 0rem;">
+                                    <li>
+                                        <i class="fa fa-calendar ms-1" aria-hidden="true"></i>
+                                        {{ Str::substr($product->created_at, 0, 10) }}
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-eye ms-1" aria-hidden="true"></i>
+                                        {{ $product->views }}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- <div class="col-xl-3 col-md-4 col-sm-6 col-xm-6 col-6 mb-4 d-flex align-items-stretch">
                         <div class="card border-success " id="body-card-color">
                             <div class="w3layouts_news_grid">
-                                <a href="product/{{ $product->id }}">
-                                    <img style="max-height: 260px;height: 240px;width:100%;background-color:rgb(244, 253, 242)"
-                                        src="/storage/images/{{ $product->image }}" alt=" " class="img-responsive" />
+                                <a style="max-height: 200px;height: 200px;width:100%;background-color:rgb(247, 252, 245)"
+                                    href="product/{{ $product->id }}">
+                                    <img style="max-height: 200px;height: 200px;width:100%;background-color:rgb(247, 252, 245)"
+                                        src="/storage/images/{{ $product->image }}" alt=" " class="card-img-top" />
                                     <div class="w3layouts_news_grid_pos">
                                         <div class="wthree_text">
                                             <button type="button" class="btn btn-success ">عرض
@@ -91,22 +117,28 @@
                                 </a>
                             </div>
 
-                            <div class="card-body  d-flex align-content-between flex-column">
-                                <h5 class="card-title  bd-highlight">{{ Str::limit($product->name, 60) }}</h5>
+                            <div class="card-body ">
+                                <h5 class="card-title  bd-highlight">{{ Str::limit($product->name, 40) }}</h5>
                                 <p style="color: rgb(101, 107, 100)" class="card-text bd-highlight">
-                                    {{ Str::limit($product->description, 50) }}</p>
-                                <div class="agileits_w3layouts_news_grid mt-auto p-0">
-                                    <ul class="pt-3">
-                                        <li><i class="fa fa-calendar mx-1"
-                                                aria-hidden="true"></i>{{ Str::substr($product->created_at, 0, 10) }}
+                                    {{ Str::limit($product->description, 40) }}</p>
+                                <div class="card-footer agileits_w3layouts_news_grid">
+                                    <ul class="pt-1" style="margin-bottom: 0.5rem;">
+                                        <li>
+                                            <i class="fa fa-calendar ms-1" style="margin-bottom: 0px"
+                                                aria-hidden="true"></i>
+                                            {{ Str::substr($product->created_at, 0, 10) }}
                                         </li>
-                                        <li><i class="fa-solid fa-eye mx-1" aria-hidden="true"></i>{{ $product->views }}
+                                        <li>
+                                            <i class="fa-solid fa-eye ms-1" style="margin-bottom: 0px"
+                                                aria-hidden="true"></i>
+                                            {{ $product->views }}
                                         </li>
                                     </ul>
                                 </div>
+
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     {{-- <div class="col-md-4  w3ls_news_grid card border-success">
                         <div class="w3layouts_news_grid">
                             <img src="{{ $product->image }}" alt=" " class="img-responsive" />
