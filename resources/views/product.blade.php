@@ -25,7 +25,7 @@
                 </ul>
             </div>
             <div class="w3layouts_breadcrumbs_right">
-                <h2>متجرنا </h2>
+                <h3>متجرنا </h3>
             </div>
             <div class="clearfix"> </div>
         </div>

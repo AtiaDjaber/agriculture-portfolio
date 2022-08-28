@@ -52,4 +52,10 @@ Route::get('/', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
+Route::get('/services', function () {
+    return view('service');
+})->name('services');
+Route::get('/studies-office', function () {
+    return view('etude');
+})->name('studies-office');
 Auth::routes();

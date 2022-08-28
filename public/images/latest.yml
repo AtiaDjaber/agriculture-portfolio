@@ -1,0 +1,8 @@
+version: 13.0.0
+files:
+  - url: Express-Store-Setup-13.0.0.exe
+    sha512: vA6wc3smqLaC/BhGSOHrL7p3QRl0QlxEAcwg6BBZpRSLpxiuz7y81WzL2RmtGSc4POhEzHSJWS5ieXSaAS0mtg==
+    size: 69974895
+path: Express-Store-Setup-13.0.0.exe
+sha512: vA6wc3smqLaC/BhGSOHrL7p3QRl0QlxEAcwg6BBZpRSLpxiuz7y81WzL2RmtGSc4POhEzHSJWS5ieXSaAS0mtg==
+releaseDate: '2022-08-19T20:17:42.587Z'

@@ -10,13 +10,19 @@
                   <ul class="w3layouts_menu__list">
                       <li class=" {{ Request::is('/') ? 'active' : '' }}"><a href="/">الرئيسية</a>
                       </li>
+                      <li class=" {{ Route::current()->getName() == 'services' ? 'active' : '' }}"><a href="/services">خدمات فلاحية</a>
+                      </li>
+                      <li class=" {{Route::current()->getName() == 'studies-office' ? 'active' : '' }}"><a href="/studies-office">مكتب الدراسات</a>
+                      </li>
                       <li
                           class=" {{ Route::current()->getName() == 'products' || Route::current()->getName() == 'product.detail' ? 'active' : '' }}">
                           <a href="/products">منتجاتنا</a>
                       </li>
+
                       <li class=" {{ Route::current()->getName() == 'contact' ? 'active' : '' }}"><a
                               href="/contact">اتصل
-                              بنا</a></li>
+                              بنا</a>
+                      </li>
                   </ul>
               </nav>
           </div>
