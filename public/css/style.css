@@ -4,7 +4,15 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
-
+.counterUp-area {
+	padding: 62px 0 85px 0;
+}
+.counterUp-area {
+	background:url("/images/counterup.jpg");
+	background-size:contain;
+	padding: 104px 0 97px 0;
+	margin-top:58px;
+}
 .chip_inactive {
     display: inline-block;
     padding: 0 10px;
@@ -16,7 +24,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     border-radius: 25px;
     color: #313131;
     background-color: #f1f1f1;
-    border: #f4f4f4 1px solid;
 }
 .chip_active {
     display: inline-block;
@@ -28,8 +35,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     margin-bottom: 8px;
     border-radius: 25px;
     color: #f4f4f4;
-    background-color: #54cd09;
-    border: #f4f4f4 1px solid;
+    background-color: #61f307;
 }
 
 ol,
@@ -614,8 +620,10 @@ button.close {
 }
 .w3l_social_icon_gridr {
     float: left;
-    margin: 1.8em 0 0 5em;
+    margin: 1.8em 0 0 5em;    color: black;
+
 }
+
 .w3l_social_icon_gridr h4 {
     font-size: 2em;
     color: #212121;
@@ -731,9 +739,6 @@ figure.agileits_effect_moses:hover p {
 
 figure.agileits_effect_moses:hover img {
     opacity: 0.6;
-}
-.image_grid {
-    height: 220px;
 }
 /*-- //welcome-bottom --*/
 /*-- news --*/
@@ -1619,9 +1624,6 @@ h3.agileits-icons-title {
     }
 }
 @media (max-width: 768px) {
-    .image_grid {
-        height: 170px;
-    }
     h3.agileits-icons-title {
         font-size: 28px;
     }
@@ -1642,9 +1644,6 @@ h3.agileits-icons-title {
     }
 }
 @media (max-width: 640px) {
-    .image_grid {
-        height: 170px;
-    }
     .icon-box {
         float: left;
         width: 50%;
@@ -3254,3 +3253,4 @@ h2.typoh2 {
         padding: 1em 0;
     }
 }
+

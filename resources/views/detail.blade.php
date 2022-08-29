@@ -27,9 +27,9 @@
                     <li><span style="color: rgb(85, 84, 84)">{{ $product->name }}</span></li>
                 </ul>
             </div>
-            <div class="w3layouts_breadcrumbs_right">
+            {{-- <div class="w3layouts_breadcrumbs_right">
                 <h2>تفاصيل المنتج</h2>
-            </div>
+            </div> --}}
             <div class="clearfix"> </div>
         </div>
     </div>

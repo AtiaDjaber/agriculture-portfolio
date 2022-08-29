@@ -84,7 +84,16 @@
         </div>
         <div class="clearfix"> </div>
     </div>
-    <div style="background-color: rgb(250 255 250);" class="d-flex flex-wrap align-items-center">
+    <div class="my-5">
+        <h3 class="agileits_w3layouts_head " style="font-size: 1.6rem"><span style="font-size: 1.6rem"> خدماتنا </span>
+            <div style="color: grey"></div> OUR SERVICES
+        </h3>
+        <div class="w3_agile_image">
+            <img src="/images/1.png" alt=" " class="img-responsive" />
+        </div>
+    </div>
+
+    <div style="background-color: rgb(250 255 250);" class="d-flex flex-wrap align-items-center p-3">
         <img class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 " data-aos="fade-left" style="padding-inline: 0px;"
             src="/images/Farming-260468-pixahive.jpg">
         <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 " data-aos="fade-right">
@@ -93,14 +102,95 @@
         </div>
     </div>
 
+    <div style="background-color: rgb(250 255 250);" class="d-flex flex-wrap-reverse align-items-center p-3">
+        <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 " data-aos="fade-left">
+            <h1 class="pt-2" style="font-weight: bold;color:#a4dd25">عمليات التسميد</h1>
+            <h4 class="pt-2 subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste aperiam velit sunt
+                aspernatur tempora fuga porro, incidunt repudiandae, quos doloribus sint quo perspiciatis asperiores id
+                officiis doloremque recusandae quasi. Illo!</h4>
+        </div>
+        <img class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 " data-aos="fade-right" style="padding-inline: 0px;"
+            src="/images/fertilizer-rates.jpg">
+    </div>
+
+    <div style="background-color: rgb(250 255 250);" class="d-flex flex-wrap align-items-center p-3">
+        <img class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 " data-aos="fade-left" style="padding-inline: 0px;"
+            src="/images/Crop Protection_Web.jpg">
+        <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 " data-aos="fade-right">
+            <h1 class="pt-2" style="font-weight: bold;color:#a4dd25">عمليات الرش بالادوية</h1>
+            <h4 class="pt-2 subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio deserunt laboriosam
+                cupiditate asperiores aliquam exercitationem dolorem! Impedit natus sed amet, ea aspernatur debitis odit
+                distinctio tempore unde exercitationem quod perferendis.</h4>
+        </div>
+    </div>
+
+    <div style="background-color: rgb(250 255 250);" class="d-flex flex-wrap-reverse align-items-center p-3">
+        <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 " data-aos="fade-left">
+            <h1 class="pt-2" style="font-weight: bold;color:#a4dd25">عمليات الحصاد</h1>
+            <h4 class="pt-2 subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste aperiam velit sunt
+                aspernatur tempora fuga porro, incidunt repudiandae, quos doloribus sint quo perspiciatis asperiores id
+                officiis doloremque recusandae quasi. Illo!</h4>
+        </div>
+        <img class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 " data-aos="fade-right" style="padding-inline: 0px;"
+            src="/images/use-case-agriculture-1.jpg">
+    </div>
+
+    <div style="background-color: rgb(250 255 250);" class="d-flex flex-wrap align-items-center p-3">
+        <img class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 " data-aos="fade-left" style="padding-inline: 0px;"
+            src="/images/machinery.jpg">
+        <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 " data-aos="fade-right">
+            <h1 class="pt-2" style="font-weight: bold;color:#a4dd25">كراء العتاد الفلاحي</h1>
+            <h4 class="pt-2 subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio deserunt laboriosam
+                cupiditate asperiores aliquam exercitationem dolorem! Impedit natus sed amet, ea aspernatur debitis odit
+                distinctio tempore unde exercitationem quod perferendis.</h4>
+        </div>
+    </div>
+    {{-- <div class="about-bottom">
+		<div class="container">
+			<h3><span>Agriculture</span> not only gives riches to a nation, but the
+				only riches she can call her own</h3>
+			<div class="agileits_w3layouts_learn_more agileits_learn_more hvr-radial-out">
+				<a href="#" data-toggle="modal" data-target="#myModal">Read More</a>
+			</div>
+		</div>
+	</div> --}}
     <!-- //analytic-work -->
+    <div class="counterUp-area sm-mt-10">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="single-counter">
+                        <h4 class="counter">+5</h4>
+                        <h4>مشاريع</h4>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="single-counter">
+                        <h4 class="counter">13</h4>
+                        <h4>زبائن</h4>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="single-counter">
+                        <h4 class="counter">+250</h4>
+                        <h4>منتجات</h4>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="single-counter">
+                        <h4 class="counter">+23</h4>
+                        <h4>العتاد</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="welcome_bottom" class="welcome-bottom">
         <div class="col-md-6 wthree_welcome_bottom_left">
-            <h3>we work hard and make our country <span>greenery</span></h3>
-            <p>Nullam pretium euismod orci ac porta. Interdum et malesuada fames ac ante
-                ipsum primis in faucibus. Donec at scelerisque dolor, vel placerat mi.</p>
+            <h3 style="color: #a4dd25;font-weight:bold">شركتنا تعمل بجد من أجل خدمتكم</h3>
+
             <div class="col-md-6 wthree_welcome_bottom_left_grid" data-aos="zoom-in">
-                <div class="w3l_social_icon_gridl">
+                <div class="w3l_social_icon_gridl" style="background-color:#a4dd25">
                     <img src="images/8.png" alt=" " class="img-responsive" />
                 </div>
                 <div class="w3l_social_icon_gridr">

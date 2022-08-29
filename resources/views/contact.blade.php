@@ -24,23 +24,26 @@
                     </li>
                 </ul>
             </div>
-            <div class="w3layouts_breadcrumbs_right">
+            {{-- <div class="w3layouts_breadcrumbs_right">
                 <h2>اتصل بنا </h2>
-            </div>
+            </div> --}}
             <div class="clearfix"> </div>
         </div>
     </div>
 
     <div class="welcome">
         <div class="container">
+            <div class="my-4">
+
             <h3 class="agileits_w3layouts_head">Get in<span> touch</span> with us</h3>
             <div class="w3_agile_image">
                 <img src="/images/1.png" alt=" " class="img-responsive" />
             </div>
+        </div>
 
             <div class="w3ls_news_grids">
                 <div class="col-md-8 w3_agile_mail_left">
-                    <div class="agileits_mail_grid_right1 agile_mail_grid_right1">
+                    <div class="agileits_mail_grid_right1">
                         <form action="#" method="post">
                             <span class="d-flex ">
                                 <h5 style="width: 150px" class="mt-2">اسمك الكامل</h5>
@@ -59,8 +62,8 @@
                                 <h5 style="width: 150px" class="mt-2">المحتوي</h5>
                                 <textarea name="Message" placeholder=" " required></textarea>
                             </span>
-                            <div class="w3_submit">
-                                <input type="submit" value="ارسال">
+                            <div class="w3_submit" style="align-items:left;width: 200px;float:left;">
+                                <input style="width: 200px" type="submit" value="ارسال">
                             </div>
                         </form>
                     </div>
@@ -86,7 +89,6 @@
                     <div class="w3_agileits_mail_right_grid_main">
                         <div class="w3layouts_mail_grid_left">
                             <div class="w3layouts_mail_grid_left1 hvr-radial-out">
-                                {{-- <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> --}}
                                 <i style="font-size: 26px;color:grey;padding-top: 12px" class="fa-solid fa-at"></i>
                             </div>
                             <div class="w3layouts_mail_grid_left2">
@@ -106,7 +108,7 @@
                             </div>
                             <div class="clearfix"> </div>
                         </div>
-                        <div class="w3layouts_mail_grid_left">
+                        <div class="w3layouts_mail_grid_left ">
                             <div class="w3layouts_mail_grid_left1 hvr-radial-out">
                                 <i style="font-size: 26px;padding-top: 12px;color:grey" aria-hidden="true"
                                     class="fa-solid fa-phone"></i>
@@ -115,11 +117,9 @@
                                 <h3>الهاتف</h3>
                                 <p dir="ltr" style="float: right;">+(213) 06 60 83 82 80</p>
                             </div>
-                            <div class="clearfix"> </div>
                         </div>
                     </div>
                 </div>
-                <div class="clearfix"> </div>
             </div>
         </div>
     </div>

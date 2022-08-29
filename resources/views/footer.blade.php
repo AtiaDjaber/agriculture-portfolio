@@ -3,16 +3,16 @@
         <div class="container">
             <div class="w3agile_footer_grids">
                 <div class="col-md-3 agileinfo_footer_grid">
-                    {{-- <div class="row"> --}}
-                    <div class="w3_agile_logo">
+                    <div class="row">
                         <a href="/"><img width="80px" height="80px" src="/images/logo_empty.png"></img></a>
-                        {{-- </div> --}}
                     </div>
 
                     <div dir="rtl" class="row">
                         <h4 style="font-size: 1.1rem;font-weight:bold">شركة صقر متعددة الخدمات</h4>
                     </div>
-
+                    <div dir="rtl" class="row">
+                        <h4 style="font-size: 1.1rem;font-weight:bold">Eurl sagr multi service</h4>
+                    </div>
                 </div>
 
                 <div class="col-md-4 agileinfo_footer_grid">
@@ -34,6 +34,7 @@
                     <h3>روابط</h3>
                     <ul class="w3layouts_footer_nav">
                         <li><a href="/">الرئيسية</a></li>
+                        <li><a href="/studies-office">مكتب الدراسات</a></li>
                         <li><a href="/products">المنتجات</a></li>
                         <li><a href="/contact">اتصل بنا</a></li>
                     </ul>

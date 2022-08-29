@@ -80,14 +80,16 @@
                 @foreach ($products as $product)
                     <div class="col-xl-3 col-md-4 col-sm-6 col-xm-6 col-6 mb-3">
                         <div class="card border-success h-100">
-                            <img style="background-color:rgb(252, 255, 251)" src="/storage/images/{{ $product->image }}"
-                                alt="لا يتوفر صورة" class="card-img-top image_grid" />
+                            <a href="product/{{ $product->id }}">
+                                <img style="background-color:rgb(252, 255, 251)" src="/storage/images/{{ $product->image }}"
+                                    alt="لا يتوفر صورة" class="card-img-top image_grid" />
+                            </a>
                             <div class="card-body">
                                 <h5 class="card-title">{{ Str::limit($product->name, 40) }}</h5>
                                 <p class="card-text"> {{ Str::limit($product->description, 40) }}</p>
                             </div>
                             <div class="card-footer agileits_w3layouts_news_grid"
-                                style="background-color: rgb(253, 255, 250)">
+                                style="background-color: rgb(253, 255, 250);">
                                 <ul class="pt-1" style="padding-left: 0rem; margin-bottom: 0rem;">
                                     <li>
                                         <i class="fa fa-calendar ms-1" aria-hidden="true"></i>
