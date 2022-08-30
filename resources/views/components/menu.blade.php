@@ -10,8 +10,8 @@
                   <ul class="w3layouts_menu__list">
                       <li class=" {{ Request::is('/') ? 'active' : '' }}"><a href="/">الرئيسية</a>
                       </li>
-                      <li class=" {{ Route::current()->getName() == 'services' ? 'active' : '' }}"><a href="/services">خدمات فلاحية</a>
-                      </li>
+                      {{-- <li class=" {{ Route::current()->getName() == 'services' ? 'active' : '' }}"><a href="/services">خدمات فلاحية</a>
+                      </li> --}}
                       <li class=" {{Route::current()->getName() == 'studies-office' ? 'active' : '' }}"><a href="/studies-office">مكتب الدراسات</a>
                       </li>
                       <li

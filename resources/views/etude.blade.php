@@ -1,6 +1,5 @@
 @extends('layouts.welcome')
 @section('content')
-
     <div class="banner1">
         <div class="container">
             <div class="w3_agileits_banner_main_grid">
@@ -31,9 +30,8 @@
         </div>
     </div>
     <div class="my-5">
-        <h3 class="agileits_w3layouts_head " style="font-size: 1.6rem"><span style="font-size: 1.6rem"> مكتب الدراسات
-            </span>
-            <div style="color: grey"></div>STUDIES OFFICE
+        <h3 class="agileits_w3layouts_head "><span style="font-size: 1.6rem;font-weight:bold"> مكتب الدراسات</span>
+            <div style="color: grey;font-weight:bold;font-size: 1.6rem"></div>STUDIES OFFICE
         </h3>
         <div class="w3_agile_image">
             <img src="/images/1.png" alt=" " class="img-responsive" />
@@ -52,7 +50,8 @@
             src="/images/Premium Agribusiness Consulting Service.jpg">
         <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 " data-aos="fade-right">
             <h1 class="pt-2" style="font-weight: bold;color:#a4dd25">متابعات ميدانية</h1>
-            <h4 class="pt-2 subtitle">متابعة جميع مراحل نمو وتشخيص تطورات المحاصيل الكبرى وكذلك بساتين الاشجار المثمرة والنخيل والمحاصيل المحمية والحقلية. ومكافحة الافات .</h4>
+            <h4 class="pt-2 subtitle">متابعة جميع مراحل نمو وتشخيص تطورات المحاصيل الكبرى وكذلك بساتين الاشجار المثمرة
+                والنخيل والمحاصيل المحمية والحقلية. ومكافحة الافات .</h4>
         </div>
     </div>
 
@@ -69,7 +68,8 @@
             src="/images/projects.jpg">
         <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 " data-aos="fade-right">
             <h1 class="pt-2" style="font-weight: bold;color:#a4dd25">دراسة المشاريع</h1>
-            <h4 class="pt-2 subtitle">دراسة جدوى للمشاريع الفلاحية وتحضير الملفات ومتابعتها اداريا ( دراسات شاملة ،مخططات ،تحديد الموقع..).</h4>
+            <h4 class="pt-2 subtitle">دراسة جدوى للمشاريع الفلاحية وتحضير الملفات ومتابعتها اداريا ( دراسات شاملة ،مخططات
+                ،تحديد الموقع..).</h4>
         </div>
     </div>
 

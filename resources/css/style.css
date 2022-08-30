@@ -13,6 +13,49 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	padding: 104px 0 97px 0;
 	margin-top:58px;
 }
+.single-counter {
+	text-align:center;
+   
+}
+.counter{
+    font-size: 2.3rem;
+    font-weight: 700;
+    font-family: 'Playfair Display';
+
+    color: #a4dd25;
+}
+
+.section-title {
+	text-align:center;
+}
+.section-title h2 {
+	font-size:36px;
+	text-transform:capitalize;
+}
+.section-title p {
+	font-weight: 500;
+	font-size: 16px;
+	line-height:28px;
+	margin: 13px 0 0 0;
+}
+
+.sin-service {
+	background-color:#fff;
+	border:1px solid #ebebeb;
+	padding:20px;
+	text-align:center;
+	transition:.3s;
+}
+.style-2{
+   color
+   : #636363;
+}
+a.custom-card,
+a.custom-card:hover {
+  color: inherit;
+  text-decoration: none;
+
+}
 .chip_inactive {
     display: inline-block;
     padding: 0 10px;

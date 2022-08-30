@@ -24,10 +24,10 @@
                     </li>
                 </ul>
             </div>
-            <div class="w3layouts_breadcrumbs_right">
+            {{-- <div class="w3layouts_breadcrumbs_right">
                 <h3>متجرنا </h3>
             </div>
-            <div class="clearfix"> </div>
+            <div class="clearfix"> </div> --}}
         </div>
     </div>
 
@@ -70,8 +70,6 @@
                         class={{ $category_id == $category->id ? 'chip_active' : 'chip_inactive' }} type="button"
                         class="btn btn-success"> {{ $category->name }}</button>
                 @endforeach
-
-
             </div>
 
             {{-- <div class="w3ls_news_grids my-5"> --}}
@@ -79,14 +77,13 @@
 
                 @foreach ($products as $product)
                     <div class="col-xl-3 col-md-4 col-sm-6 col-xm-6 col-6 mb-3">
-                        <div class="card border-success h-100">
-                            <a href="product/{{ $product->id }}">
+                        <a href="product/{{ $product->id }}" class="custom-card">
+                            <div class="card border-success h-100">
                                 <img style="background-color:rgb(252, 255, 251)" src="/storage/images/{{ $product->image }}"
                                     alt="لا يتوفر صورة" class="card-img-top image_grid" />
-                            </a>
                             <div class="card-body">
-                                <h5 class="card-title">{{ Str::limit($product->name, 40) }}</h5>
-                                <p class="card-text"> {{ Str::limit($product->description, 40) }}</p>
+                                <h5 class="card-title" >{{ Str::limit($product->name, 40) }}</h5>
+                                <p class="card-text"  > {{ Str::limit($product->description, 40) }}</p>
                             </div>
                             <div class="card-footer agileits_w3layouts_news_grid"
                                 style="background-color: rgb(253, 255, 250);">
@@ -101,8 +98,10 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>
+                        </div>                </a>
+
                     </div>
+
                     {{-- <div class="col-xl-3 col-md-4 col-sm-6 col-xm-6 col-6 mb-4 d-flex align-items-stretch">
                         <div class="card border-success " id="body-card-color">
                             <div class="w3layouts_news_grid">
