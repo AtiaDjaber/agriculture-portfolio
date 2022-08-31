@@ -58,15 +58,27 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div> --}}
+
     <div class="welcome my-3">
         <div class="container">
-            <div class="d-flex flex-wrap">
-                <div style="cursor:pointer;" onclick="getDataByFilter(null)" name="category" id="category"
+            <div class="mb-3 row">
+                <label for="searchInput" class="col-form-label pb-2" style="width: 50px;font-size: 1.2rem;">بحث</label>
+                <div class="col-8">
+                    <input type="text" value="{{$search}}" class="form-control" id="searchInput" name="search">
+                </div>
+                <div class="col-auto">
+                    <button type="submit" onclick="getDataByFilter({{ $category_id }})" class="btn btn-outline-success mb-3">بحث
+                        <i class=" mx-2 fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+            <div class="d-flex flex-wrap" id="categories">
+                <div style="cursor:pointer;" onclick="getDataByFilter('')" name="category" id="category"
                     class={{ $category_id == null ? 'chip_active' : 'chip_inactive' }}>
                     عرض الكل
                 </div>
                 @foreach (App\Models\Category::all() as $category)
-                    <button onclick="getDataByFilter({{ $category->id }})" id="category" name="category"
+                    <button onclick="getDataByFilter({{ $category->id }})" id="{{ $category->id }}"
+                        name="category{{ $category->id }}"
                         class={{ $category_id == $category->id ? 'chip_active' : 'chip_inactive' }} type="button"
                         class="btn btn-success"> {{ $category->name }}</button>
                 @endforeach
@@ -81,24 +93,25 @@
                             <div class="card border-success h-100">
                                 <img style="background-color:rgb(252, 255, 251)" src="/storage/images/{{ $product->image }}"
                                     alt="لا يتوفر صورة" class="card-img-top image_grid" />
-                            <div class="card-body">
-                                <h5 class="card-title" >{{ Str::limit($product->name, 40) }}</h5>
-                                <p class="card-text"  > {{ Str::limit($product->description, 40) }}</p>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ Str::limit($product->name, 40) }}</h5>
+                                    <p class="card-text"> {{ Str::limit($product->description, 40) }}</p>
+                                </div>
+                                <div class="card-footer agileits_w3layouts_news_grid"
+                                    style="background-color: rgb(253, 255, 250);">
+                                    <ul class="pt-1" style="padding-left: 0rem; margin-bottom: 0rem;">
+                                        <li>
+                                            <i class="fa fa-calendar ms-1" aria-hidden="true"></i>
+                                            {{ Str::substr($product->created_at, 0, 10) }}
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-eye ms-1" aria-hidden="true"></i>
+                                            {{ $product->views }}
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="card-footer agileits_w3layouts_news_grid"
-                                style="background-color: rgb(253, 255, 250);">
-                                <ul class="pt-1" style="padding-left: 0rem; margin-bottom: 0rem;">
-                                    <li>
-                                        <i class="fa fa-calendar ms-1" aria-hidden="true"></i>
-                                        {{ Str::substr($product->created_at, 0, 10) }}
-                                    </li>
-                                    <li>
-                                        <i class="fa-solid fa-eye ms-1" aria-hidden="true"></i>
-                                        {{ $product->views }}
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>                </a>
+                        </a>
 
                     </div>
 
@@ -164,14 +177,23 @@
     </div>
     <script type="text/javascript">
         function getDataByFilter(category) {
-
-            if (category == null) {
-                window.history.pushState('products', 'المنتجات',
-                    '/products');
-            } else {
-                window.history.pushState('products', 'المنتجات',
-                    '/products?category=' + category);
+            var category_id='';
+            if (category) {
+                category_id  =category;
             }
+            var category=category_id;
+            var search = document.getElementById('searchInput').value;
+            // var categoris = document.getElementsByClassName('chip_active');
+            // if (condition) {
+            //     category = condition[0].id;
+            // }
+            // if (category == null) {
+            //     window.history.pushState('products', 'المنتجات',
+            //         '/products');
+            // } else {
+            window.history.pushState('products', 'المنتجات',
+                '/products?category=' + category + '&search=' + search);
+            // }
 
             window.location.reload();
             // $.ajax({
