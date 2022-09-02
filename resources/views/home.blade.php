@@ -15,9 +15,7 @@
                 <div class="w3_banner_info_grid">
                     <h3 class="test"> شركة صقر متعددة الخدمات </h3>
                     <h3 class="test"> Sagr Eurl Multi Service </h3>
-                    <p style="font-size: 1rem;color:aliceblue">شركة صقر الرائدة في مجال الخدمات الفلاحية وتقديم الاستشارات
-                        وبيع الادوية
-                        الفلاحية</p>
+                    <p style="font-size: 1rem;color:aliceblue">شركة صقر الرائدة في مجال الخدمات الفلاحية و تقديم الاستشارات</p>
                     <ul>
                         <li><a href="contact" class="w3ls_more">اتصل بنا</a></li>
                     </ul>
@@ -25,7 +23,7 @@
             </div>
             <div class="thim-click-to-bottom">
                 <a href="#welcome_bottom" class="scroll">
-                    <i class="fa  fa-chevron-down"></i>
+                    <i style="color: white" class="fa  fa-chevron-down"></i>
                 </a>
             </div>
         </div>
@@ -37,7 +35,6 @@
                 <div class="w3_agileits_banner_bottom_pos_grid">
                     <div class="col-xs-4 wthree_banner_bottom_grid_left">
                         <div class="agile_banner_bottom_grid_left_grid hvr-radial-out">
-                            {{-- <i class="fa fa-pagelines" aria-hidden="true"></i> --}}
                             <i class="fa-solid fa-certificate" aria-hidden="true"></i>
                         </div>
                     </div>
@@ -54,7 +51,6 @@
                 <div class="w3_agileits_banner_bottom_pos_grid">
                     <div class="col-xs-4 wthree_banner_bottom_grid_left">
                         <div class="agile_banner_bottom_grid_left_grid hvr-radial-out">
-                            {{-- <i class="fa fa-certificate" aria-hidden="true"></i> --}}
                             <i class="fa-brands fa-product-hunt" aria-hidden="true"></i>
                         </div>
                     </div>
@@ -84,6 +80,7 @@
         </div>
         <div class="clearfix"> </div>
     </div>
+    
     <div class="my-5">
         <h3 class="agileits_w3layouts_head "><span style="font-size: 1.6rem;font-weight:bold"> خدماتنا </span>
             <div style="color: grey;font-weight:bold;font-size: 1.6rem"></div> OUR SERVICES
@@ -94,9 +91,12 @@
     </div>
 
     <div style="background-color: rgb(250 255 250);" class="d-flex flex-wrap align-items-center p-3">
-        <img class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 " data-aos="fade-left" style="padding-inline: 0px;"
+        <img class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 "
+         data-aos="fade-left"
             src="/images/Farming-260468-pixahive.jpg">
-        <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 " data-aos="fade-right">
+        <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 "
+         data-aos="fade-right"
+         >
             <h1 class="pt-2" style="font-weight: bold;color:#a4dd25">تهيئة الأراضي الفلاحية</h1>
             <h4 class="pt-2 subtitle">توفير كافة الظروف للزراعة</h4>
         </div>
@@ -137,15 +137,7 @@
             <h4 class="pt-2 subtitle">توفير عتاد الفلاحية بكافة انواعه لزيادة الانتاجية و السرعة في الاداء</h4>
         </div>
     </div>
-    {{-- <div class="about-bottom">
-		<div class="container">
-			<h3><span>Agriculture</span> not only gives riches to a nation, but the
-				only riches she can call her own</h3>
-			<div class="agileits_w3layouts_learn_more agileits_learn_more hvr-radial-out">
-				<a href="#" data-toggle="modal" data-target="#myModal">Read More</a>
-			</div>
-		</div>
-	</div> --}}
+
     <!-- //analytic-work -->
     <div class="about-area mt-85 my-5">
         <div class="container">
@@ -157,8 +149,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="row mt-2">
-                    <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="row justify-content-center mt-2">
+                    <div class="col-lg-4 col-md-6 col-sm-12 my-2">
                         <div class="sin-service style-2">
                             <i class="fa-regular fa-gauge-max"></i>
                              <i style="color: #a4dd25;font-size: 2rem"  class="mb-3 fa-regular fa-circle-check"></i>
@@ -166,14 +158,14 @@
                             <p>الشعور بالراحة و الأمان</p>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="col-lg-4 col-md-6 col-sm-12 my-2">
                         <div class="sin-service style-2">
                             <i style="color: #a4dd25;font-size: 2rem"  class="mb-3 fa-regular fa-bookmark"></i>
                             <h3 style="color: #313131;font-weight:500;">الجودة</h3>
                             <p>الحصول على نتائج جيدة جدا</p>
                         </div>
                     </div>
-                    <div class="col-lg-4 d-lg-block col-md-6 d-md-none col-sm-12">
+                    <div class="col-lg-4 col-md-6 col-sm-12 my-2">
                         <div class="sin-service style-2">
                               <i style="color: #a4dd25;font-size: 2rem"  class="mb-3 fa-regular fa-thumbs-up"></i>
                             <h3 style="color: #313131;font-weight:500;">السرعة</h3>
@@ -186,28 +178,28 @@
         <div class="counterUp-area my-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 my-1">
                         <div class="single-counter">
                             <h4 class="counter">+5</h4>
-                            <h4>مشاريع</h4>
+                            <h4 style="color: #535353">مشاريع</h4>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 my-1">
                         <div class="single-counter">
                             <h4 class="counter">13</h4>
-                            <h4>زبائن</h4>
+                            <h4 style="color: #535353">زبائن</h4>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 my-1">
                         <div class="single-counter">
                             <h4 class="counter">+250</h4>
-                            <h4>منتجات</h4>
+                            <h4 style="color: #535353">منتجات</h4>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 my-1">
                         <div class="single-counter">
                             <h4 class="counter">+23</h4>
-                            <h4>العتاد</h4>
+                            <h4 style="color: #535353">العتاد</h4>
                         </div>
                     </div>
                 </div>

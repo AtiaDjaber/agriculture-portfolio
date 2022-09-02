@@ -4,6 +4,13 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
+/* body {
+    overflow-x: hidden ;
+    width:100%;
+
+} */
+html, body { overflow-x: hidden; }
+
 .counterUp-area {
 	padding: 62px 0 85px 0;
 }
@@ -352,6 +359,7 @@ a.w3_agile_vimeo:hover {
     top: 100%;
     background: white;
 }
+
 .link-effect-8 a:hover::after,
 .w3layouts_menu__list li.active a::after {
     visibility: visible;
@@ -409,6 +417,7 @@ span.char3 {
     position: absolute;
     bottom: 7%;
     left: 50%;
+    right: 50%;
     width: 40px;
     height: 40px;
     font-size: 40px;
@@ -418,7 +427,7 @@ span.char3 {
 .thim-click-to-bottom i {
     color: #fff;
     padding: 20px 10px;
-    border: 1px solid;
+    border: 1px solid #fff;
     border-radius: 20px;
     font-size: 15px;
 }
@@ -2866,10 +2875,12 @@ h2.typoh2 {
     .w3ls_more:hover {
         border: 1px solid #fff;
     }
+    
     .thim-click-to-bottom i {
         padding: 15px 8px;
         font-size: 8px;
     }
+
     .welcome,
     .newsletter,
     .about-bottom,
